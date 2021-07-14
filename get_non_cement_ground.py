@@ -25,6 +25,7 @@ if __name__ == '__main__':
 
         j_result = {}
         geometrys = []
+        id = 0
         for r in result:
             geometry = {}
             coord = []
@@ -33,6 +34,9 @@ if __name__ == '__main__':
             geometry["type"] = "Polygon"
             feature = {}
             feature["geometry"] = geometry
+            feature["properties"] = {}
+            feature["properties"]["id"] = id
+            id += 1
             feature["type"] = "Feature"
             geometrys.append(feature)
 
